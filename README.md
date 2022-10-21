@@ -1,2 +1,2 @@
 # StaticHomepge
-project live at:- https://amresh012.github.io/StaticHomepge/Homepage.html
+project live at:- https://amresh012.github.io/StaticHomepge/HomePage.html
