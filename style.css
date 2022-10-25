@@ -2,6 +2,7 @@
 
 body {
    font-family: 'Poppins', sans-serif;
+   scroll-behavior: smooth;
 }
 
 header {
@@ -274,9 +275,27 @@ main {
 {
   background-image:url("./signupandlogin/logo/pexels-uriel-mont-6280705.jpg");
   background-size: cover;
-  background-clip: content-box;
-  clip-path: padding-box circle(50px at 0 100px);
 }
+@media screen and (min-width: 380px) {
+  .main {
+      background-image:url("./signupandlogin/logo/pexels-andrea-piacquadio-3765112.jpg");
+  background-size: cover;
+  }
+  
+}
+@media screen and (min-width: 380px) {
+  .box {
+     position:absolute; 
+     margin-top: 300px;
+  }
+}
+@media screen and (min-width: 480px) {
+  body {
+    background-color: lightgreen;
+  }
+}
+
+
 .box
 {
   display: flex;
@@ -401,6 +420,10 @@ input{
   top:86px;
   right: 25px;
 }
+.bi-geo-alt:hover , .bi-cursor:hover
+{
+  font-size: 19px;
+}
 /*****main-2*/
 .main-2
 {
@@ -437,11 +460,6 @@ input{
 {
   background-image: url("./signupandlogin/logo/pexels-pixabay-164444.jpg");
   background-size: cover;
-  background-position: fixed;
   height:200px;
   width: 100%;
 }
-
-
-
-
