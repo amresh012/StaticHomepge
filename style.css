@@ -373,7 +373,7 @@ main {
 /*main-1 content*/
 .main
 {
-  background-image:url("./signupandlogin/logo/pexels-pixabay-210182.jpg");
+  background-image:url(./signupandlogin/logo/pexels-pixabay-210182.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   min-height:70vh;
@@ -594,6 +594,7 @@ input{
    width:105vw;
    max-height: inherit;
    background-color: rgb(254, 252, 252);
+   overflow:auto;
     }
     .box-1
     {
@@ -654,7 +655,7 @@ input{
   display: flex;
   flex-direction: column;
 }
-input{
+input[type=text]{
     height:50px;
     min-width:50rem;
     margin-left: 50px;
@@ -716,7 +717,7 @@ input{
   font-size: 18px;
   right: 25px;
 }
-.bi-geo-alt:hover , .bi-cursor:hover
+.bi-geo-alt:hover 
 {
    transform: scale(0.90);
 }
