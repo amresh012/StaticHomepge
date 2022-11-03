@@ -26,7 +26,7 @@ img
     justify-content: space-evenly;
 
 }
-@media screen and (min-width: 480px) {
+@media screen and (max-width: 800px) {
   .main {
     flex-direction: column;
   }

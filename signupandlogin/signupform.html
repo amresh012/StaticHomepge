@@ -7,9 +7,13 @@
       src="https://kit.fontawesome.com/64d58efce2.js"
       crossorigin="anonymous"
     ></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.9.1/font/bootstrap-icons.min.css" integrity="sha512-5PV92qsds/16vyYIJo3T/As4m2d8b6oWYfoqV+vtizRB6KhF1F9kYzWzQmsO6T3z3QG2Xdhrx7FQ+5R1LiQdUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+      <!---refresh-->
+    <meta http-equiv="refresh" content="300">
     <!--recaptcha script-------------------------->
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    <link rel="shortcut icon" href="./img/log.svg" type="image/x-icon">
 
 
     <link rel="stylesheet" href="signupstyle.css" />
@@ -27,7 +31,7 @@
             </div>
             <div class="input-field">
               <i class="fas fa-lock"></i>
-              <input type="password" placeholder="Password" required name="password"/>
+              <input type="password" placeholder="Password"  required name="password"/>
             </div>
             <div class="g-recaptcha" data-sitekey="6LcDGmkiAAAAAHAk-SccPO3Km6f6-CAMlLsmALea"></div>
             <input type="submit" value="Login" class="btn solid" />
@@ -36,9 +40,14 @@
               <a href="#" class="social-icon">
                 <i class="fab fa-facebook-f"></i>
               </a>
-             
-              <a href="#" class="social-icon">
+               <a href="#" class="social-icon">
                 <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="bi- bi-apple"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="bi bi-linkedin"></i>
               </a>
             </div>
           </form>
@@ -46,18 +55,18 @@
             <h2 class="title">Sign up</h2>
             <div class="input-field">
               <i class="fas fa-user"></i>
-              <input type="text" id="username"placeholder="Username" />
+              <input type="text" id="username"placeholder="Username" maxlength="30" />
             </div>
             <div class="input-field">
               <i class="fas fa-envelope"></i>
-              <input type="email" id="email" placeholder="Email" />
+              <input type="email" id="email" placeholder="Email" id="email" maxlength="35"/>
             </div>
             <div class="input-field">
                <i class="fas fa-lock"></i>
               <input type="password" placeholder="Password" id="psw" name="psw"
                pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
                 title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"
-                required />
+                required/><span><i class="bi bi-eye-fill" id="eye" onclick="toggle()"></i></span>
             </div>
             <!--password  validation-->
             <main>
@@ -67,6 +76,7 @@
             <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
             <p id="number" class="invalid">A <b>number</b></p>
             <p id="length" class="invalid">Minimum <b>8 characters</b></p>
+            <p id="character" class="invalid">Minimum <b>8 characters</b></p>
             </div>
             </main>
             <!--password  validation  end-->
@@ -79,12 +89,16 @@
               <a href="#" class="social-icon">
                 <i class="fab fa-google"></i>
               </a>
+              <a href="#" class="social-icon">
+                <i class="bi- bi-apple"></i>
+              </a>
+               <a href="#" class="social-icon">
+                <i class="bi bi-linkedin"></i>
+              </a>
             </div>
           </form>
         </div>
       </div>
-
-
       <div class="panels-container">
         <div class="panel left-panel">
           <div class="content">
@@ -93,7 +107,7 @@
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis,
               ex ratione. Aliquid!
             </p>
-            <button class="btn transparent" id="sign-up-btn">
+            <button  type="submit"class="btn transparent" id="sign-up-btn">
               Sign up
             </button>
           </div>
@@ -135,6 +149,11 @@
     {
       let email = document.getElementById('email')
       email.value = variable;
+    },
+    'Ok submit *tag': function(variable)
+    {
+      let button = document.getElementById('sign-up-btn')
+      email.value = variable;
     }
   };
 
@@ -149,13 +168,16 @@
 
 
 
-  <script type="module"
+  <!-- <script type="module"
   src="https://www.gstatic.com/firebasejs/9.11.0/firebase-app.js"></script>
   <!-- // : Add SDKs for Firebase products that you want to use
   // https://firebase.google.com/docs/web/setup#available-libraries -->
    <script type="module"
   src="https://www.gstatic.com/firebasejs/9.11.0/firebase-auth.js"></script>
    <script type="module"
-  src="https://www.gstatic.com/firebasejs/9.11.0/firebase-database.js"></script>
+  src="https://www.gstatic.com/firebasejs/9.11.0/firebase-database.js"></script> -->
    <script src="app.js"></script>
+
+
+   
 </html>

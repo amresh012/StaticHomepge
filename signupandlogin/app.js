@@ -67,15 +67,36 @@ myInput.onkeyup = function () {
     length.classList.remove("valid");
     length.classList.add("invalid");
   }
+  // Validate numbers
+  var numbers = /[!,%,&,@,#, $,^,*,?, _, ~]/g;
+  if (myInput.value.match(symbols)) {
+    number.classList.remove("invalid");
+    number.classList.add("valid");
+  } else {
+    number.classList.remove("valid");
+    number.classList.add("invalid");
+  }
+
 }
-//form autentication firebase storage
-//
+//authentication and verification js
 
 //g-recaptcha
 var onloadCallback = function () {
   alert("grecaptcha is ready!");
 };
-
+//password hide
+var state = false;
+function toggle() {
+  if (state) {
+    document.getElementById("psw").setAttribute("type", "password");
+    state = false;
+  }
+  else {
+    document.getElementById("psw").setAttribute("type", "text");
+    state = true;
+    document.getElementsByClassName("").innerHTML = "<span><i class='bi bi-eye-fill-slashed'></i></span>"
+  }
+}
 
 
 
